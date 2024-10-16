@@ -1,0 +1,302 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background: #f5f5f5; /* Light background */
+}
+
+/* Header */
+.header {
+    background-color: #2c3e50; /* Dark background */
+    padding: 1rem;
+    text-align: center;
+    color: white;
+}
+
+.header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #e74c3c; /* Deep red hover effect */
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Intro Section */
+.intro-section {
+    background-color: #333; /* Dark gray background */
+    color: white;
+    padding: 50px;
+    text-align: center;
+}
+
+.intro-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #00bcd4; /* Cyan accent */
+}
+
+.intro-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 auto;
+    width: 70%;
+}
+
+.intro-section h3 {
+    font-size: 28px;
+    color: #00bcd4; /* Cyan accent */
+    margin-top: 40px;
+}
+
+/* Flexbox to Align Skills & Image Side by Side */
+.intro-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.skills-expertise {
+    flex: 1;
+    padding-right: 60px;
+}
+
+.intro-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.intro-section ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Circular Image Styling */
+.intro-image {
+    flex: 0.5;
+    text-align: left;
+}
+
+.intro-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid #00bcd4; /* Cyan accent */
+    object-fit: cover;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Projects Section */
+.projects-section {
+    padding: 4rem;
+    background-color: white; /* Light background */
+    text-align: center;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.project-card {
+    width: 300px;
+    padding: 1.5rem;
+    background-color: #ecf0f1; /* Light gray for project cards */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+}
+
+.project-card img {
+    height: 50%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.project-card h3 {
+    margin: 1rem 0 0.5rem;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Bio Section */
+.bio-section {
+    background-color: #f7f7f7; /* Very light gray */
+    padding: 4rem;
+    text-align: center;
+}
+
+.bio-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #2c3e50; /* Dark background */
+    color: white;
+    padding: 4rem;
+    text-align: center;
+}
+
+.contact-section p {
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #34495e; /* Dark blue-gray */
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+}
+
+/* Sidebar container */
+.sidebar {
+    position: fixed;
+    right: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 110px;
+    height: auto;
+    padding: 10px;
+    background-color: #333; /* Dark gray */
+    border-radius: 10px 0 0 10px;
+    transition: right 0.3s ease;
+}
+
+.sidebar:hover {
+    right: 0;
+}
+
+.sidebar a {
+    display: block;
+    text-align: center;
+    margin: 15px 0;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    color: #00bcd4; /* Cyan hover effect */
+}
+
+/* Custom cursor (100px by 100px arrow) */
+.custom-cursor {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    pointer-events: none;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 40px solid #e74c3c; /* Deep red arrow */
+    transform-origin: center;
+    z-index: 1000;
+}
+
+/* Hide "SOCIALS" by default */
+.socials-title {
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    display: none;
+    margin-bottom: 20px;
+}
+
+/* Show "SOCIALS" on hover */
+.sidebar:hover .socials-title {
+    display: block;
+    margin-top: 20px;
+}
+
+/* Add icons using Font Awesome */
+.fab {
+    font-family: "Font Awesome 5 Brands";
+}
+
+/* Gradient for GitHub icon */
+.fab.fa-github {
+    background: linear-gradient(45deg, #000000, #0000ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Adjust icons for specific social media */
+.fab.fa-facebook-f {
+    color: #3b5998;
+}
+
+.fab.fa-linkedin-in {
+    color: #0077b5;
+}
+
+.fab.fa-instagram {
+    color: #e4405f;
+}
+
+.fab.fa-youtube {
+    color: #ff0000;
+}
+
+/* Sidebar anchored */
+.sidebar.anchored {
+    right: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
