@@ -77,7 +77,7 @@ body {
     margin-top: 40px;
 }
 
-/* Flexbox to Align Skills & Image Side by Side */
+/* Flexbox to Align Skills & Image Side by Side (Default for desktop) */
 .intro-content {
     display: flex;
     justify-content: center;
@@ -223,19 +223,6 @@ footer {
     color: #00bcd4; /* Cyan hover effect */
 }
 
-/* Custom cursor (100px by 100px arrow) */
-.custom-cursor {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    pointer-events: none;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-bottom: 40px solid #e74c3c; /* Deep red arrow */
-    transform-origin: center;
-    z-index: 1000;
-}
-
 /* Hide "SOCIALS" by default */
 .socials-title {
     font-size: 16px;
@@ -298,5 +285,29 @@ footer {
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Mobile Specific Styles */
+@media only screen and (max-width: 768px) {
+    /* Stack Skills & Image vertically on mobile */
+    .intro-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .skills-expertise {
+        padding-right: 0;
+        margin-top: 20px;
+    }
+
+    .intro-image {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .intro-image img {
+        width: 200px;
+        height: 200px;
     }
 }
