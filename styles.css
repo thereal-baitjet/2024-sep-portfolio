@@ -195,6 +195,10 @@ body {
 
 .project-card h3 {
     margin: 1rem 0 0.5rem;
+    max-height: 4.5em; /* Limit the description's height */
+    overflow: hidden; /* Hide anything beyond the max height */
+    text-overflow: ellipsis; /* If text overflows, show ellipsis */
+    white-space: normal; /* Allows the text to wrap */
 }
 
 .project-card:hover {
