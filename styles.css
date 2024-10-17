@@ -6,11 +6,54 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* General styles */
 body {
-    line-height: 1.6;
-    color: #333;
-    background: #f5f5f5; /* Light background */
-}
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .photo {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .photo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%; /* Optional: This makes the photo circular */
+    width: 150px; /* Adjust size as needed */
+  }
+  
+  .skills-expertise {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Mobile-friendly adjustments */
+  @media (max-width: 768px) {
+    .skills-expertise {
+      padding: 10px;
+    }
+  
+    .photo img {
+      width: 120px; /* Reduce the image size on mobile */
+    }
+  }
+  
+  /* Desktop styles */
+  @media (min-width: 769px) {
+    .skills-expertise {
+      padding: 30px;
+      max-width: 600px;
+      margin: 0 auto; /* Center the content */
+    }
+  
+    .photo img {
+      width: 200px; /* Increase image size on larger screens */
+    }
+  }
+  
 
 /* Header */
 .header {
